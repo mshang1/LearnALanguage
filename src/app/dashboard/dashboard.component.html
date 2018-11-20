@@ -1,0 +1,37 @@
+
+
+
+<b>Please enter your search text in the box below and click "Search Wiki" button to search Wikipedia</b>
+<div>
+  <input type="text" [(ngModel)]="searchText" style="width: 40%;"  >
+</div>
+
+<button (click)="searchWiki(searchText.value)" class = "button button2">Search Wiki</button>
+
+<div></div>
+
+<font color="Orange" size="5"><b>Search results show here:</b></font>
+<div *ngFor="let item of searchList">
+  {{item.title}}
+  <button (click)="translation(item.title)" class = "button button3">Translate</button>
+</div>
+
+<div>
+</div>
+
+<div><font color="Orange" size = "5"><b>Translation shows here:</b></font></div>
+
+<div>{{originText}} (English) is translated to {{transList}} (French)</div>
+
+<div></div>
+
+<div><font color="Orange" size="5"><b>Back from translation to origin shows here:</b></font>
+    <button (click)='translateWord()' class = "button button2">Back Translate By Word</button>
+    <button (click)='clearback()' class = "button button2">Clear Back Translate Record</button>
+</div>
+
+<!-- {{backText}} -->
+
+<div *ngFor="let item of backText">
+  <span>{{item}}</span>
+</div>

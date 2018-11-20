@@ -1,0 +1,12 @@
+<font color="Orange" size = "5"><b>Search history shows here:</b></font>
+
+<div *ngFor="let record of searches">
+  {{record.sText}}
+</div> 
+
+<div></div>
+<font color="Orange" size = "5"><b>Translation history shows here:</b></font>
+
+<div *ngFor="let t of trans">
+  {{t.transText}}
+</div> 
